@@ -13,16 +13,20 @@ class HotPostsTableSeeder extends Seeder
     {
         HotPost::truncate();
 
-        $response = Http::get("https://api.reddit.com/r/artificial/hot")->json()['data']['children'];
+        $response = $this->getHotPosts();
     
-        foreach($response as $subRedit){
+        foreach($response as $hotPost){
             HotPost::create([
-                'title'           => $subRedit['data']['title'],
-                'author'          => $subRedit['data']['author'],
-                'ups'             => $subRedit['data']['ups'],
-                'num_comments'    => $subRedit['data']['num_comments'],
-                'post_created_at' => Carbon::parse($subRedit['data']['created'])->format('Y-m-d h:i:s') 
+                'title'           => $hotPost['data']['title'],
+                'author'          => $hotPost['data']['author'],
+                'ups'             => $hotPost['data']['ups'],
+                'num_comments'    => $hotPost['data']['num_comments'],
+                'post_created_at' => Carbon::parse($hotPost['data']['created'])->format('Y-m-d h:i:s') 
             ]);
         }
+    }
+
+    private function getHotPosts(){
+        return Http::get("https://api.reddit.com/r/artificial/hot")->json()['data']['children'];
     }
 }
