@@ -24,3 +24,5 @@ Pontos extras:
 - Uso de container;
 - Documentação;
 - Utilizar framework CakePHP
+
+`php artisan schedule:work`
