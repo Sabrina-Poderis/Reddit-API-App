@@ -35,7 +35,7 @@ Pontos extras:
 - Instalação do [Composer](https://getcomposer.org/download/) para utilização do laravel
 
 ### Banco de dados
-- Inicializar o servidor local via zampp
+- Inicializar o MySQL via xampp
 - Criar um novo banco de dados chamado `reddit-api-app`
 - Iniciar o terminal
 - Entrar na pasta do projeto `cd reddit-api-app`
@@ -48,7 +48,7 @@ Pontos extras:
 - Entrar na pasta do projeto `cd reddit-api-app`
 - Instalar o composer `composer install`
 - Criar o .env `cp .env.example .env`
-- Gerar a chave do artisan `php artisan key:generate`
+- Gerar a chave do servidor artisan `php artisan key:generate`
 - Inicializar o servidor `php artisan serve`
 - Inicializar a fila que executará a consulta da API `php artisan schedule:work`
 
@@ -75,7 +75,7 @@ Exemplo de saída:
 
 ```
 [
-    {"id":16,
+    {"id"             :16,
      "title"          : "my meme generating AI just came up with this (not technically AI)",
      "author"         : "snoggel",
      "ups"            : 173,
@@ -85,14 +85,14 @@ Exemplo de saída:
      "updated_at"     : "2022-03-27T19:16:02.000000Z"
     },
     
-    {"id":3,
-     "title":"\ud83d\udc49 Impressed With AlphaFold? Checkout This Protein Structure Prediction Model (FastFold) That Reduces AlphaFold\u2019s Training Time From 11 Days To 67 Hours",
-     "author":"No_Coffee_4638",
-     "ups":38,
-     "num_comments":2,
-     "post_created_at":"2022-03-27 04:29:04",
-     "created_at":"2022-03-27T19:16:02.000000Z",
-     "updated_at":"2022-03-27T19:16:02.000000Z"
+    {"id"             :3,
+     "title"          : "\ud83d\udc49 Impressed With AlphaFold? Checkout This Protein Structure Prediction Model (FastFold) That Reduces AlphaFold\u2019s Training Time From 11 Days To 67 Hours",
+     "author"         : "No_Coffee_4638",
+     "ups"            : 38,
+     "num_comments"   : 2,
+     "post_created_at": "2022-03-27 04:29:04",
+     "created_at"     : "2022-03-27T19:16:02.000000Z",
+     "updated_at"     : "2022-03-27T19:16:02.000000Z"
     },
 ]
 ```
