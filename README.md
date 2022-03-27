@@ -53,12 +53,12 @@ Pontos extras:
 - Inicializar a fila que executará a consulta da API `php artisan schedule:work`
 
 ## Principais arquivos do projeto
-- [Rotas e validação de parâmetros GET](routes\web.php)
-- [Model das postagens que estejam HOT do subredit](app\Models\HotPost.php)
-- [Repositório das postagens](app\Repositories\HotPostRepository.php)
-- [Controller dos endpoins](app\Http\Controllers\HotPostController.php)
-- [Definição do agendamento da tarefa de consulta a API](app\Console\Kernel.php)
-- [Seeder que consulta a API e alimenta o banco](database\seeders\HotPostsTableSeeder.php)
+- [Rotas e validação de parâmetros GET](routes/web.php)
+- [Model das postagens que estejam HOT do subredit](app/Models/HotPost.php)
+- [Repositório das postagens](app/Repositories/HotPostRepository.php)
+- [Controller dos endpoins](app/Http/Controllers/HotPostController.php)
+- [Definição do agendamento da tarefa de consulta a API](app/Console/Kernel.php)
+- [Seeder que consulta a API e alimenta o banco](database/seeders/HotPostsTableSeeder.php)
 
 ## Endpoints
 
